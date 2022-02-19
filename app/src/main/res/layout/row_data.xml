@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardview"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="6dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#212121"
+        >
+
+
+        <TextView
+            android:id="@+id/animename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_marginHorizontal="4dp"
+            android:fontFamily="@font/medium"
+            android:gravity="center"
+            android:paddingVertical="4dp"
+            android:text="asdasdasda"
+            android:textColor="#fff"
+            android:textSize="14dp" />
+
+        <TextView
+            android:gravity="start"
+            android:id="@+id/episodeno"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textSize="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFC107"
+            android:padding="4dp"
+            android:background="#7952B3"
+            android:elevation="16dp"
+            android:text="25"/>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

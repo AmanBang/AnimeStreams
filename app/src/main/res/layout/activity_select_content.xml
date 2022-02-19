@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".SelectContent"
+    tools:ignore="ExtraText"
+    android:layout_gravity="center">
+
+
+    <Button
+
+        android:layout_margin="5dp"
+        android:id="@+id/AnimeWindow"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/saitama"
+        android:fontFamily="@font/audiowide"
+        android:text="Anime"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:fontFamily="@font/audiowide"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:id="@+id/MangaWindow"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:text="Manga"
+        android:background="@drawable/manga"/>
+
+    <Button
+        android:fontFamily="@font/audiowide"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:id="@+id/TVWindow"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:text="TV Show &amp; Movies"
+        android:background="@drawable/tvs2"/>
+
+</LinearLayout>

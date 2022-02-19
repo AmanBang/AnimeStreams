@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1079329659007",
+    "project_id": "animestreams-85ad5",
+    "storage_bucket": "animestreams-85ad5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079329659007:android:3273fc7a0e0ef80367474a",
+        "android_client_info": {
+          "package_name": "com.searchit.animestreams"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079329659007-l1r1kpr5m49h443vuth7pc91qc4otdiv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.searchit.animestreams",
+            "certificate_hash": "c4ac97fdd665e03108e573531d4783ac3970cd5c"
+          }
+        },
+        {
+          "client_id": "1079329659007-mtkj9ehnpjuhp3gd3cmedv7q1esrb31k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEk25nfrAxybNfM4rS1bKo6Rq9tqD3rBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079329659007-mtkj9ehnpjuhp3gd3cmedv7q1esrb31k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
