@@ -13,6 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
@@ -101,10 +102,29 @@ public class AnimeFragment extends Fragment {
 
             try {
                 org.jsoup.nodes.Document searching;
-                searching = Jsoup.connect("https://gogoanime.pe").get();
-                Log.i("dubep", "started");
+                searching = Jsoup.connect("https://gogoanime.sk").get();
+
                 Elements li = searching.select("div[class=last_episodes loaddub]").select("ul[class=items]").select("li");
                 int size = li.size();
+//                Log.i("dubep", "started"+ size);
+//                for (Element e : li){
+//                    Anime anime = new Anime();
+//                    Element a = e.getElementsByTag("a").first();
+//                    String link = a.attr("href");
+//                    String aniName = a.getElementsByClass("name").text();
+//                    String image = a.getElementsByClass("picture").first().getElementsByTag("img").attr("src");
+//
+//                    Log.i("dubep", "found"+ link+", "+aniName+", "+ image);
+//
+//                    anime.setLink(link);
+//                    anime.setName(aniName);
+//                    anime.setImageLink(image);
+//                    anime.setTime(a.getElementsByClass("meta").text());
+//                    AnimeList.add(anime);
+//                }
+
+
+
                 for (int i = 0; i < size; i++) {
                     Anime anime = new Anime();
 
@@ -129,6 +149,7 @@ public class AnimeFragment extends Fragment {
                     //=====================================================================================================================================//
 
                 }
+//                Log.i("dubep", "doInBackground: "+ size);
 
             } catch (IOException e) {
                 e.printStackTrace();
