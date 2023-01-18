@@ -28,13 +28,14 @@
         android:visibility="visible"
         android:id="@+id/buffer"
         android:layout_height="wrap_content" />
+
     <WebView
+        android:id="@+id/ASZ"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/ASZ"
         android:layout_gravity="center"
+
         android:background="#000"
-      android:layout_marginHorizontal="21.4dp"
 
         />
     <FrameLayout

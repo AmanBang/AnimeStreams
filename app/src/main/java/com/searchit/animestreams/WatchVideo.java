@@ -2,6 +2,8 @@ package com.searchit.animestreams;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,8 +13,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -27,6 +31,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class WatchVideo extends AppCompatActivity {
@@ -52,6 +58,8 @@ public class WatchVideo extends AppCompatActivity {
     private String intesitailid = "Interstitial_Android";
     private boolean test = true;
 
+
+    Map<String, String> extraHeaders = new HashMap<String, String>();
 
     @Override
     public void onBackPressed() {
@@ -108,14 +116,20 @@ public class WatchVideo extends AppCompatActivity {
         customViewContainer = findViewById(R.id.customViewContainer);
         webView.getSettings().setJavaScriptEnabled(true);
         WebSettings settings = webView.getSettings();
-        webView.getWebChromeClient();
+//        webView
         settings.setSafeBrowsingEnabled(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(false);
         settings.setBlockNetworkImage(true);
+        settings.setLoadsImagesAutomatically(false);
+        settings.setDomStorageEnabled(true);
+//        webView.getSettings().setUserAgentString("Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Mobile Safari/537.36");
+//        Map<String, String> extraHeaders = new HashMap<String, String>();
+//        extraHeaders.put("Referer", " https://gogoanime.run/");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             settings.setForceDark(WebSettings.FORCE_DARK_AUTO);
         }
-        settings.setLoadsImagesAutomatically(false);
+
+//        settings.setLoadsImagesAutomatically(false);
         webView.setVerticalScrollBarEnabled(false);
         webView.setHorizontalScrollBarEnabled(false);
 
@@ -169,15 +183,14 @@ public class WatchVideo extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             Document gogoAnimePageDocument = null;
-            Document gogoAnimePageDocument1 = null;
-            Log.i("currentPlaying", "https://www.moviesmanha.xyz/");
+//            Document gogoAnimePageDocument1 = null;
 
             try {
                 gogoAnimePageDocument = Jsoup.connect(gogoAnimeUrl).get();
-                vidStreamUrl = "https:" + gogoAnimePageDocument.getElementsByClass("play-video").get(0).getElementsByTag("iframe").get(0).attr("src");
+                vidStreamUrl ="https://"+ gogoAnimePageDocument.getElementsByClass("play-video").get(0).getElementsByTag("iframe").get(0).attr("src");
                 Log.i("Linktoplay", vidStreamUrl);
-                gogoAnimePageDocument1 = Jsoup.connect(vidStreamUrl).get();
-                Log.i("Source1", gogoAnimePageDocument1+"");
+//                gogoAnimePageDocument1 = Jsoup.connect(vidStreamUrl).get();
+//                Log.i("Source1", gogoAnimePageDocument1+"");
 
             } catch (Exception e) {
                 Log.i("gogoanimeerror", e.toString());
@@ -187,6 +200,7 @@ public class WatchVideo extends AppCompatActivity {
 
 
     }
+
 
 
 }
