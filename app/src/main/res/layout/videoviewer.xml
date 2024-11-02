@@ -9,16 +9,16 @@
     android:id="@+id/framelayout"
     android:orientation="horizontal">
 
-    <com.google.android.exoplayer2.ui.PlayerView
-        android:id="@+id/exoplayer"
-        android:layout_width="match_parent"
-        android:background="#000"
-        app:controller_layout_id="@layout/exoplayer"
-        android:layout_gravity="center"
-        android:layout_height="match_parent"
-        android:visibility="visible">
+<!--    <com.google.android.exoplayer2.ui.PlayerView-->
+<!--        android:id="@+id/exoplayer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:background="#000"-->
+<!--        app:controller_layout_id="@layout/exoplayer"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="visible">-->
 
-    </com.google.android.exoplayer2.ui.PlayerView>
+<!--    </com.google.android.exoplayer2.ui.PlayerView>-->
     <ProgressBar
         android:layout_centerInParent="true"
         android:elevation="1dp"

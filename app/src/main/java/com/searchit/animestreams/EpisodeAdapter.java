@@ -22,6 +22,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.searchit.animestreams.Room.database.AnimeDatabase;
+import com.searchit.animestreams.Room.entities.Anime;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -89,7 +92,7 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.MyViewHo
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.button.setText(animename + " Episode " + (position + 1));
 
         AnimeDatabase database = AnimeDatabase.getInstance(context);

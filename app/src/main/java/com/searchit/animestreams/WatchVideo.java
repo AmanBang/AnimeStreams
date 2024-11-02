@@ -2,8 +2,6 @@ package com.searchit.animestreams;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,10 +11,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebChromeClient;
-import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -26,6 +22,9 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+
+import com.searchit.animestreams.Room.database.AnimeDatabase;
+import com.searchit.animestreams.Room.entities.Anime;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -120,7 +119,6 @@ public class WatchVideo extends AppCompatActivity {
         settings.setSafeBrowsingEnabled(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(false);
         settings.setBlockNetworkImage(true);
-        settings.setLoadsImagesAutomatically(false);
         settings.setDomStorageEnabled(true);
 //        webView.getSettings().setUserAgentString("Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Mobile Safari/537.36");
 //        Map<String, String> extraHeaders = new HashMap<String, String>();
@@ -187,8 +185,8 @@ public class WatchVideo extends AppCompatActivity {
 
             try {
                 gogoAnimePageDocument = Jsoup.connect(gogoAnimeUrl).get();
-                vidStreamUrl ="https://"+ gogoAnimePageDocument.getElementsByClass("play-video").get(0).getElementsByTag("iframe").get(0).attr("src");
-                Log.i("Linktoplay", vidStreamUrl);
+                vidStreamUrl = gogoAnimePageDocument.getElementsByClass("play-video").get(0).getElementsByTag("iframe").get(0).attr("src");
+                Log.i("Anime: Linktoplay", vidStreamUrl);
 //                gogoAnimePageDocument1 = Jsoup.connect(vidStreamUrl).get();
 //                Log.i("Source1", gogoAnimePageDocument1+"");
 

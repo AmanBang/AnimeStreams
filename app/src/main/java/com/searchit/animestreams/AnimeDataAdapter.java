@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.searchit.animestreams.Room.database.AnimeDatabase;
+import com.searchit.animestreams.Room.entities.Anime;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -58,7 +60,7 @@ public class AnimeDataAdapter extends RecyclerView.Adapter<AnimeDataAdapter.MyVi
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.title.setText(mAnimeList.get(position).getName());
         holder.episodeno.setText("Episode " + mAnimeList.get(position).getEpisodeNo());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +86,7 @@ public class AnimeDataAdapter extends RecyclerView.Adapter<AnimeDataAdapter.MyVi
                 Anime anime = new Anime(temp.getName(), temp.getLink(), temp.getEpisodeNo(), temp.getImageLink(), time);
                 database.animeDao().insertAnime(anime);
                 intent.putExtra("animename", temp.getName());
-                intent.putExtra("imagelink", temp.getImageLink());
+                intent.putExtra("imagelink", "https://www.gogoanime.dev"+temp.getImageLink());
                 intent.putExtra("time", time);
 
                 context.getApplicationContext().startActivity(intent);

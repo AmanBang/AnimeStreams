@@ -1,4 +1,4 @@
-package com.searchit.animestreams;
+package com.searchit.animestreams.Room.model;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.searchit.animestreams.Anime;
+import com.searchit.animestreams.Room.entities.Anime;
 
 import java.util.List;
 

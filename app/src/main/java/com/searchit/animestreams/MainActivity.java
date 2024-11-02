@@ -34,6 +34,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.searchit.animestreams.Room.database.AnimeDatabase;
+import com.searchit.animestreams.Room.entities.Anime;
 
 import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;

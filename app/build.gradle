@@ -1,6 +1,6 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.gms.google-services'
+    id("com.google.gms.google-services")
 
 }
 repositories {
@@ -51,8 +51,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.android.material:material:1.2.0-alpha05'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.android.exoplayer:exoplayer:2.10.8'
-    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.8'
 
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     def room_version = "2.2.5"
@@ -60,8 +58,8 @@ dependencies {
 
     // Java language implementation
     //noinspection GradleDependency
-    implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+//    implementation "androidx.room:room-runtime:$room_version"
+    implementation("androidx.room:room-runtime:2.2.5") // Or your desired Room version
 
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'commons-io:commons-io:2.6'
@@ -73,14 +71,10 @@ dependencies {
     implementation "com.github.parse-community.Parse-SDK-Android:parse:1.26.0"
 
 
-    implementation 'com.android.volley:volley:1.1.0'
+    implementation('com.android.volley:volley:1.2.1')
 
 
     //new
-    implementation 'com.github.smarteist:autoimageslider:1.2.0'
     implementation 'com.github.bumptech.glide:glide:4.7.1'
-
-
-
 
 }

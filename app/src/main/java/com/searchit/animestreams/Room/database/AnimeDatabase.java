@@ -1,4 +1,4 @@
-package com.searchit.animestreams;
+package com.searchit.animestreams.Room.database;
 
 import android.content.Context;
 import android.util.Log;
@@ -6,6 +6,9 @@ import android.util.Log;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
+import com.searchit.animestreams.Room.entities.Anime;
+import com.searchit.animestreams.Room.model.AnimeDao;
 
 @Database(entities = Anime.class,version =1,exportSchema = false)
 public abstract class AnimeDatabase extends RoomDatabase {

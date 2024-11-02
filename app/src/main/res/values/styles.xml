@@ -52,9 +52,9 @@
         <item name="android:textColor">#e0f7fa
         </item>
     </style>
-    <style name="temp" parent="@style/ExoMediaButton.FastForward">
-    <item name="android:icon">@drawable/settings</item>
-</style>
+<!--    <style name="temp" parent="@style/ExoMediaButton.FastForward">-->
+<!--    <item name="android:icon">@drawable/settings</item>-->
+<!--</style>-->
     <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>

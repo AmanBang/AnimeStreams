@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.searchit.animestreams.Room.database.AnimeDatabase;
+import com.searchit.animestreams.Room.entities.Anime;
+
 import java.util.ArrayList;
 import java.util.List;
 

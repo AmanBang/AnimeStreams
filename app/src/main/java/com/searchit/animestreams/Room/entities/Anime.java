@@ -1,4 +1,4 @@
-package com.searchit.animestreams;
+package com.searchit.animestreams.Room.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

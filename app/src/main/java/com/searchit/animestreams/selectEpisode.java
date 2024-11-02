@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -22,11 +21,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.searchit.animestreams.Room.database.AnimeDatabase;
+import com.searchit.animestreams.Room.entities.Anime;
 import com.squareup.picasso.Picasso;
 
 
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
@@ -243,7 +243,7 @@ public class selectEpisode extends AppCompatActivity {
             try {
                 org.jsoup.nodes.Document searching = Jsoup.connect(link).get();
                 Elements li = searching.select("div[class=anime_video_body]").select("ul[id=episode_page]").select("li");
-                imagelink = searching.select("div[class=anime_info_body_bg]").select("img").attr("src");
+                imagelink = "https://gogoanime.dev"+searching.select("div[class=anime_info_body_bg]").select("img").attr("src");
                 summary = searching.select("div[class=anime_info_body_bg]").select("p[class=type]").eq(1).text();
 
 //                AD_Type.setText();

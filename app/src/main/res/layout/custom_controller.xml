@@ -100,14 +100,14 @@
 
             </LinearLayout>
 
-            <com.google.android.exoplayer2.ui.DefaultTimeBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/exo_progress"
-                android:layout_marginTop="-8dp"
-                app:unplayed_color="#45424E"
-                app:buffered_color="#95989F"
-                app:played_color="#FF0000"/>
+<!--            <com.google.android.exoplayer2.ui.DefaultTimeBar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/exo_progress"-->
+<!--                android:layout_marginTop="-8dp"-->
+<!--                app:unplayed_color="#45424E"-->
+<!--                app:buffered_color="#95989F"-->
+<!--                app:played_color="#FF0000"/>-->
 
         </LinearLayout>
 

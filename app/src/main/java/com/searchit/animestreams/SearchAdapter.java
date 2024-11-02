@@ -1,6 +1,7 @@
 package com.searchit.animestreams;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +16,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.searchit.animestreams.Room.entities.Anime;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -61,7 +63,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.title.setText(mAnimeList.get(position).getName());
         holder.episodeno.setText(mAnimeList.get(position).getEpisodeNo());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
